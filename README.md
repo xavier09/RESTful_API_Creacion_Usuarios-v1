@@ -12,7 +12,7 @@ Pasos para hacer las pruebas:
 
 1- Haz click al botón de <> Codey selecciona abrir con Visual Studio o también puede descargarlo, descomprimir y luego abrirlo en Visual Studio.
 
-2- Correr el script de creación BD en Sql Server Management Studio
+2- Correr el script de creación BD en Sql Server Management Studio. Esta en este repositorio en la carpeta Script BD y Diagrama solucion.
 
 3- Cambiar el valor del parámetro Data Source en la cadena de conexión, que se encuentra en el controlador CreacionUsuarioController.cs, por el server name del Sql Server Manament Studio instalado en la maquina donde se probara el proyecto.
 
@@ -21,5 +21,6 @@ Pasos para hacer las pruebas:
 5- Ejecutar el método de login, el mismo cuenta con los datos de login de un usuario defecto, ya creado en la BD en el paso 2. Este devolverá un Jwt Token.
 
 6- Ahora con el token obtenido en el paso anterior, puede ingresarlo haciendo click el boton authorize en Swagger, 
-luego en el input ingrese la palabra Bearer seguido de un espacio y luego coloque el token. Luego de esto tendra autorizacion para crear un usuario en la BD, usando el Json que se encuentra en el Request body (puede modificarlos por los valores deseados). 
+luego en el input ingrese la palabra Bearer seguido de un espacio y luego coloque el token y dale al boton autorize. Luego de esto tendra autorizacion en el metodo Creacion para crear un usuario en la BD, 
+usando el Json que se encuentra en el Request body (puede modificarlos por los valores deseados). 
 Luego de esto se mostrarán los datos del usuario registrado.
